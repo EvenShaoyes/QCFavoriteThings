@@ -7,6 +7,11 @@
 //
 
 #import "QCMineViewController.h"
+#import "LSCSettingController.h"
+#import "LSCSettingItem.h"
+#import "LSCSettingGroup.h"
+#import "LSCSettingCell.h"
+#import "LSCSettingArrowItem.h"
 
 @interface QCMineViewController ()
 
@@ -14,24 +19,22 @@
 
 @implementation QCMineViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(clickSettingItem)];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+/** push到设置界面*/
+- (void)clickSettingItem
+{
+    LSCSettingController *setting = [[LSCSettingController alloc] init];
+    [self.navigationController pushViewController:setting animated:YES];
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

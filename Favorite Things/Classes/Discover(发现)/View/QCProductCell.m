@@ -235,8 +235,6 @@
     CGFloat productToolH = 40;
     self.productToolBar.frame = CGRectMake(productToolX, productToolY, productToolW, productToolH);
     
-    
-    
     self.iconView.layer.cornerRadius = self.iconView.width * .5;
 
 
