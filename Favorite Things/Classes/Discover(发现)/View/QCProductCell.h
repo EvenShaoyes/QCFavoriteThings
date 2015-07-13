@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class QCProduct;
 
 @interface QCProductCell : UITableViewCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
+@property(nonatomic,strong)QCProduct *product;
 
 @end

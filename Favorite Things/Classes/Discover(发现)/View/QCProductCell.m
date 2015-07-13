@@ -10,6 +10,8 @@
 #import "QCProductToolBar.h"
 #import "UIView+Extend.h"
 #import "NSString+extend.h"
+#import "QCDataModels.h"
+#import "UIImageView+WebCache.h"
 
 /** view 之间的间距 */
 #define QCProductMargin 10
@@ -94,6 +96,8 @@
 - (UIButton *)followBtn{
     if (!_followBtn) {
         _followBtn = [[UIButton alloc] init];
+        [_followBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
+        [_followBtn setTitleColor:[UIColor colorWithRed:1.000 green:0.000 blue:1.000 alpha:0.200] forState:UIControlStateNormal];
         [self.contentView addSubview:_followBtn];
     }
     return _followBtn;
@@ -159,6 +163,7 @@
     QCProductCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[QCProductCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }
@@ -167,9 +172,6 @@
 -  (void)layoutSubviews{
     [super layoutSubviews];
     
-    
-    //初始化数据
-    [self setupData];
     
     /** 头像 */
     CGFloat iconX = QCProductMargin;
@@ -203,7 +205,7 @@
     CGFloat productImageX = 0;
     CGFloat productImageY = iconMaxY + QCProductMargin;
     CGFloat productImageW = self.width;
-    CGFloat productImageH = 150;
+    CGFloat productImageH = 230;
     self.productImageView.frame = CGRectMake(productImageX, productImageY, productImageW, productImageH);
     
     /** 产品标题 */
@@ -227,7 +229,11 @@
     self.productTag.frame = CGRectMake(productTagX, productTagY, productTagW, productTagH);
     
     /** 产品工具条  */
-    self.productToolBar.frame;
+    CGFloat productToolX = 0;
+    CGFloat productToolY = self.productTag.maxY + QCProductMargin;
+    CGFloat productToolW = self.width;
+    CGFloat productToolH = 40;
+    self.productToolBar.frame = CGRectMake(productToolX, productToolY, productToolW, productToolH);
     
     
     
@@ -236,25 +242,33 @@
 
 }
 
-- (void)setupData{
-    self.iconView.backgroundColor = [UIColor redColor];
+- (void)setProduct:(QCProduct *)product{
+    _product = product;
     
-    self.nicknameLabel.text = @"天豪";
+    QCUploadUser *user = product.uploadUser;
+    QCCategories *categorie = [product.categories firstObject];
 
-    self.provinceLabel.text = @"广州";
+    /** 头像 */
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.avatarUrl] placeholderImage:nil];
     
-    self.followBtn.backgroundColor = [UIColor greenColor];
+    /** 昵称 */
+    self.nicknameLabel.text = user.username;
     
-    self.productImageView.backgroundColor = [UIColor grayColor];
+    /** 地区 */
+    self.provinceLabel.text = user.province;
     
-    self.productTitleLabel.text = @"赠品也有实用货! iPad 支架";
+    /** 产品图片 */
+    [self.productImageView sd_setImageWithURL:[NSURL URLWithString:product.imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
-    self.productDescLabel.text = @"产品名称 : iPad支架 入手渠道: iPad随包赠品 入手价格: 某宝6.5包邮 这个纯属偶得, 因为学习需要买了第二个pad, 买的时候也没太关心卖家的赠品宣传, 淘宝嘛, 图个便宜, 其他配件也不指望了.";
-    self.productDescLabel.backgroundColor = [UIColor redColor];
+    /** 产品标题 */
+    self.productTitleLabel.text = product.name;
     
-    [self.productTag setTitle:@"办公工具" forState:UIControlStateNormal];
+    /** 产品描述 */
+    self.productDescLabel.text = product.briefDesc;
     
+    /** 产品标签 */
+    [self.productTag setTitle:categorie.name forState:UIControlStateNormal];
+
 }
-
 
 @end

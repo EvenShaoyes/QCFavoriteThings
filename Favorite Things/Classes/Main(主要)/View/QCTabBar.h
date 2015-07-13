@@ -18,6 +18,6 @@
 
 @interface QCTabBar : UITabBar
 
-@property(nonatomic,weak)id<QCTabBarDelegate> delegate;
+@property(nonatomic,weak)id<QCTabBarDelegate,UITabBarDelegate> delegate;
 
 @end
