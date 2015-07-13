@@ -25,8 +25,4 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    NSLog(@"");
-}
 @end
