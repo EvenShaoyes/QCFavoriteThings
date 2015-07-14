@@ -1,5 +1,5 @@
 //
-//  QCProductTagButton.h
+//  QCMineViewController.h
 //  Favorite Things
 //
 //  Created by Joe-c on 15/7/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define QCProductTagButtonFon [UIFont systemFontOfSize:15]
-
-@interface QCProductTagButton : UIButton
+@interface QCMineViewController : UITableViewController
 
 @end

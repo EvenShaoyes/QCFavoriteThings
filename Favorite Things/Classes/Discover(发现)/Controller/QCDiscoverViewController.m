@@ -14,6 +14,8 @@
 @interface QCDiscoverViewController ()
 
 @property(nonatomic,strong)NSArray *productList;
+
+
 @end
 
 @implementation QCDiscoverViewController
@@ -40,9 +42,7 @@
 //        
 //    }];
 
-    self.tableView.rowHeight = 500;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = [UIColor grayColor];
+    self.tableView.rowHeight = 480;
     
     
 }
@@ -61,8 +61,8 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-}
 
+}
 
 
 @end
