@@ -25,8 +25,6 @@
 {
     [super viewDidLoad];
 
-    
-    
     /**版本信息*/
     [self setupVersionsData];
     
