@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QCMineViewController : UITableViewController
+@interface QCMineViewController : UIViewController
 
 @end
