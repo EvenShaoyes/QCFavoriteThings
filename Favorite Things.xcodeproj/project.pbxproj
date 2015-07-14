@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		428C68181B549BD2001D4C2E /* LSCSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 428C68171B549BD2001D4C2E /* LSCSettingGroup.m */; };
 		4291DFAF1B54223D006582CD /* LSCVersionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4291DFAE1B54223D006582CD /* LSCVersionsController.m */; };
 		4291DFB21B54255B006582CD /* LSCAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4291DFB11B54255B006582CD /* LSCAboutController.m */; };
 		4291DFB51B54258D006582CD /* LSCServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4291DFB41B54258D006582CD /* LSCServiceController.m */; };
@@ -16,6 +15,7 @@
 		42F81F5A1B541A6A00919AB7 /* LSCSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F81F591B541A6A00919AB7 /* LSCSettingItem.m */; };
 		42F81F5D1B541A7900919AB7 /* LSCSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F81F5C1B541A7900919AB7 /* LSCSettingCell.m */; };
 		42F81F601B541A8900919AB7 /* LSCSettingArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F81F5F1B541A8900919AB7 /* LSCSettingArrowItem.m */; };
+		42F81F631B541AB400919AB7 /* LSCSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F81F621B541AB400919AB7 /* LSCSettingGroup.m */; };
 		77438D001B52CBFD00192AFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77438CFF1B52CBFD00192AFF /* main.m */; };
 		77438D0B1B52CBFD00192AFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77438D0A1B52CBFD00192AFF /* Images.xcassets */; };
 		77438D1A1B52CBFD00192AFF /* Favorite_ThingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77438D191B52CBFD00192AFF /* Favorite_ThingsTests.m */; };
@@ -82,8 +82,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		428C68161B549BD2001D4C2E /* LSCSettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCSettingGroup.h; sourceTree = "<group>"; };
-		428C68171B549BD2001D4C2E /* LSCSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCSettingGroup.m; sourceTree = "<group>"; };
 		4291DFAD1B54223D006582CD /* LSCVersionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCVersionsController.h; sourceTree = "<group>"; };
 		4291DFAE1B54223D006582CD /* LSCVersionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCVersionsController.m; sourceTree = "<group>"; };
 		4291DFB01B54255B006582CD /* LSCAboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCAboutController.h; sourceTree = "<group>"; };
@@ -100,6 +98,8 @@
 		42F81F5C1B541A7900919AB7 /* LSCSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSCSettingCell.m; path = "../../../../../../../../DeskFile/小功能/网易彩票/Netease 2/Netease/LSCSettingCell.m"; sourceTree = "<group>"; };
 		42F81F5E1B541A8900919AB7 /* LSCSettingArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSCSettingArrowItem.h; path = "../../../../../../../../DeskFile/小功能/网易彩票/Netease 2/Netease/LSCSettingArrowItem.h"; sourceTree = "<group>"; };
 		42F81F5F1B541A8900919AB7 /* LSCSettingArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSCSettingArrowItem.m; path = "../../../../../../../../DeskFile/小功能/网易彩票/Netease 2/Netease/LSCSettingArrowItem.m"; sourceTree = "<group>"; };
+		42F81F611B541AB400919AB7 /* LSCSettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSCSettingGroup.h; path = "../../../../../../../../DeskFile/小功能/网易彩票/Netease 2/Netease/LSCSettingGroup.h"; sourceTree = "<group>"; };
+		42F81F621B541AB400919AB7 /* LSCSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSCSettingGroup.m; path = "../../../../../../../../DeskFile/小功能/网易彩票/Netease 2/Netease/LSCSettingGroup.m"; sourceTree = "<group>"; };
 		77438CFA1B52CBFD00192AFF /* Favorite Things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite Things.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77438CFE1B52CBFD00192AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77438CFF1B52CBFD00192AFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -229,15 +229,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		428C68151B549BD2001D4C2E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				428C68161B549BD2001D4C2E /* LSCSettingGroup.h */,
-				428C68171B549BD2001D4C2E /* LSCSettingGroup.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		77438CF11B52CBFD00192AFF = {
 			isa = PBXGroup;
 			children = (
@@ -433,8 +424,8 @@
 		77438D341B52CEC000192AFF /* Mine(我) */ = {
 			isa = PBXGroup;
 			children = (
-				428C68151B549BD2001D4C2E /* Model */,
 				77438D351B52CEC000192AFF /* Controller */,
+				77438D361B52CEC000192AFF /* Model */,
 				77438D371B52CEC000192AFF /* View */,
 			);
 			path = "Mine(我)";
@@ -457,6 +448,15 @@
 				4291DFB41B54258D006582CD /* LSCServiceController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		77438D361B52CEC000192AFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42F81F611B541AB400919AB7 /* LSCSettingGroup.h */,
+				42F81F621B541AB400919AB7 /* LSCSettingGroup.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		77438D371B52CEC000192AFF /* View */ = {
@@ -751,6 +751,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7767BCF31B53BD280004AAE7 /* QCCategories.m in Sources */,
+				42F81F631B541AB400919AB7 /* LSCSettingGroup.m in Sources */,
 				77438D401B52CEC000192AFF /* AppDelegate.m in Sources */,
 				7795CC3B1B534123001CB10E /* QCUploadViewController.m in Sources */,
 				7767BCE41B53B9CD0004AAE7 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -803,7 +804,6 @@
 				77C2C6821B537F36001BC2F3 /* NSString+extend.m in Sources */,
 				77C2C67F1B536E23001BC2F3 /* QCProductToolBar.m in Sources */,
 				779E189C1B5358B300593A05 /* UIView+Extend.m in Sources */,
-				428C68181B549BD2001D4C2E /* LSCSettingGroup.m in Sources */,
 				42F81F571B541A2500919AB7 /* LSCBaseTableViewController.m in Sources */,
 				7767BCEA1B53B9CD0004AAE7 /* AFURLResponseSerialization.m in Sources */,
 				7767BD441B53C40B0004AAE7 /* UIImageView+WebCache.m in Sources */,
