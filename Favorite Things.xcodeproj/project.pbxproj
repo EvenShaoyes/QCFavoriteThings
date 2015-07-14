@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770AC33A1B54BAFF00D63F05 /* QCProductTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 770AC3391B54BAFF00D63F05 /* QCProductTagButton.m */; };
+		770AC3401B54BDCB00D63F05 /* QCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 770AC33F1B54BDCB00D63F05 /* QCNavigationController.m */; };
 		77438D001B52CBFD00192AFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77438CFF1B52CBFD00192AFF /* main.m */; };
 		77438D0B1B52CBFD00192AFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77438D0A1B52CBFD00192AFF /* Images.xcassets */; };
 		77438D1A1B52CBFD00192AFF /* Favorite_ThingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77438D191B52CBFD00192AFF /* Favorite_ThingsTests.m */; };
@@ -73,6 +75,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		770AC3381B54BAFF00D63F05 /* QCProductTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCProductTagButton.h; sourceTree = "<group>"; };
+		770AC3391B54BAFF00D63F05 /* QCProductTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCProductTagButton.m; sourceTree = "<group>"; };
+		770AC33E1B54BDCB00D63F05 /* QCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNavigationController.h; sourceTree = "<group>"; };
+		770AC33F1B54BDCB00D63F05 /* QCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNavigationController.m; sourceTree = "<group>"; };
 		77438CFA1B52CBFD00192AFF /* Favorite Things.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Favorite Things.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77438CFE1B52CBFD00192AFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77438CFF1B52CBFD00192AFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -336,6 +342,8 @@
 				77C2C67B1B5369CC001BC2F3 /* QCProductCell.m */,
 				77C2C67D1B536E23001BC2F3 /* QCProductToolBar.h */,
 				77C2C67E1B536E23001BC2F3 /* QCProductToolBar.m */,
+				770AC3381B54BAFF00D63F05 /* QCProductTagButton.h */,
+				770AC3391B54BAFF00D63F05 /* QCProductTagButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +366,8 @@
 			children = (
 				7795CC301B534040001CB10E /* QCTabBarViewController.h */,
 				7795CC311B534040001CB10E /* QCTabBarViewController.m */,
+				770AC33E1B54BDCB00D63F05 /* QCNavigationController.h */,
+				770AC33F1B54BDCB00D63F05 /* QCNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -732,6 +742,7 @@
 				7767BD361B53C40B0004AAE7 /* MKAnnotationView+WebCache.m in Sources */,
 				7767BD3C1B53C40B0004AAE7 /* SDWebImageDownloaderOperation.m in Sources */,
 				7767BD0E1B53BF0F0004AAE7 /* NSObject+MJKeyValue.m in Sources */,
+				770AC33A1B54BAFF00D63F05 /* QCProductTagButton.m in Sources */,
 				7767BD0C1B53BF0F0004AAE7 /* MJType.m in Sources */,
 				7767BD3F1B53C40B0004AAE7 /* UIButton+WebCache.m in Sources */,
 				7767BD0A1B53BF0F0004AAE7 /* MJFoundation.m in Sources */,
@@ -754,6 +765,7 @@
 				7767BCEA1B53B9CD0004AAE7 /* AFURLResponseSerialization.m in Sources */,
 				7767BD441B53C40B0004AAE7 /* UIImageView+WebCache.m in Sources */,
 				7767BCED1B53BAF70004AAE7 /* Foundation+Log.m in Sources */,
+				770AC3401B54BDCB00D63F05 /* QCNavigationController.m in Sources */,
 				7795CC351B5340DD001CB10E /* QCDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

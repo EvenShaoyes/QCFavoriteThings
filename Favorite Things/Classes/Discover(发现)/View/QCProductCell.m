@@ -12,6 +12,7 @@
 #import "NSString+extend.h"
 #import "QCDataModels.h"
 #import "UIImageView+WebCache.h"
+#import "QCProductTagButton.h"
 
 /** view 之间的间距 */
 #define QCProductMargin 10
@@ -21,6 +22,7 @@
 
 /** 地区字体 */
 #define QCProductProvinceFont [UIFont systemFontOfSize:14]
+
 
 /** 产品标题字体 */
 #define QCProductTitleFont [UIFont boldSystemFontOfSize:20]
@@ -52,7 +54,7 @@
 @property(nonatomic,strong)UILabel *productDescLabel;
 
 /** 产品标签 */
-@property(nonatomic,strong)UIButton *productTag;
+@property(nonatomic,strong)QCProductTagButton *productTag;
 
 /** 产品工具条  */
 @property(nonatomic,strong)QCProductToolBar *productToolBar;
@@ -136,13 +138,12 @@
 }
 
 /** 产品标签 */
-- (UIButton *)productTag{
+- (QCProductTagButton *)productTag{
     if (!_productTag) {
-        _productTag = [UIButton buttonWithType:UIButtonTypeCustom];
+        _productTag = [QCProductTagButton buttonWithType:UIButtonTypeCustom];
         [_productTag setTitleColor:[UIColor colorWithRed:1.000 green:0.000 blue:1.000 alpha:0.520] forState:UIControlStateNormal];
         [_productTag setImage:[UIImage imageNamed:@"icon-tag"] forState:UIControlStateNormal];
-        _productTag.imageEdgeInsets = UIEdgeInsetsMake(0, -58, 0, 0);
-        _productTag.titleEdgeInsets = UIEdgeInsetsMake(0, -38, 0, 0);
+        _productTag.titleLabel.font = QCProductTagButtonFont;
 
         [self.contentView addSubview:_productTag];
     }

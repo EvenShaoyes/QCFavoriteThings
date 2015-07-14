@@ -13,6 +13,7 @@
 #import "QCNotificationViewController.h"
 #import "QCMineViewController.h"
 #import "QCTabBar.h"
+#import "QCNavigationController.h"
 
 @interface QCTabBarViewController () <QCTabBarDelegate>
 
@@ -58,7 +59,7 @@
     attri[NSForegroundColorAttributeName] = [UIColor grayColor];
     [childController.tabBarItem setTitleTextAttributes:attri forState:UIControlStateNormal];
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:childController];
+    QCNavigationController *navVC = [[QCNavigationController alloc] initWithRootViewController:childController];
     [self addChildViewController:navVC];
 }
 
