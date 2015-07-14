@@ -28,21 +28,20 @@
 /** 所有的分割线 */
 @property(nonatomic,strong)NSMutableArray *dividers;
 
-
 @end
 
 @implementation QCProductToolBar
 
 
 #pragma make 懒加载
-
+/** 所有的按钮 */
 - (NSMutableArray *)buttons{
     if (!_buttons) {
         _buttons = [NSMutableArray array];
     }
     return _buttons;
 }
-
+/** 所有的分割线 */
 - (NSMutableArray *)dividers{
     if (!_dividers) {
         _dividers = [NSMutableArray array];
@@ -55,10 +54,12 @@
         
         self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_card_bottom_background"]];
         
+        //添加三个按钮
         [self addBtnWithTitle:@"喜欢" image:@"like" selectImage:@"like_on"];
         [self addBtnWithTitle:@"拥有" image:@"want" selectImage:@"want_on"];
         [self addBtnWithTitle:@"评论" image:@"discussion" selectImage:@"discussion"];
         
+        //添加三条分割线
         [self addDivider];
         [self addDivider];
         [self addDivider];
@@ -87,8 +88,14 @@
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     [self addSubview:btn];
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.buttons addObject:btn];
     return btn;
+}
+
+- (void)btnClick:(UIButton *)btn{
+    btn.selected = !btn.isSelected;
+
 }
 /**
  *  添加分割线
@@ -99,6 +106,9 @@
     [self.dividers addObject:divider];
 }
 
+/**
+ *  布局子控件的frame
+ */
 - (void)layoutSubviews{
     [super layoutSubviews];
 
@@ -115,12 +125,12 @@
     NSInteger divCount = self.dividers.count;
     for (int i = 0; i < divCount; i ++) {
         UIImageView *imgV = self.dividers[i];
-        if (i == 2) {
+        if (i == 2) {  //顶部的分割线
             imgV.x = 0;
             imgV.y = 1;
             imgV.width = self.width;
             imgV.height = 1;
-        }else{
+        }else{ // 工具条中间的分割线
             imgV.x = (i + 1) * btnW;
             imgV.y = 0;
             imgV.width = 1;

@@ -12,6 +12,7 @@
 #import "NSString+extend.h"
 #import "QCDataModels.h"
 #import "UIImageView+WebCache.h"
+#import "QCProductTagButton.h"
 
 /** view 之间的间距 */
 #define QCProductMargin 10
@@ -52,7 +53,7 @@
 @property(nonatomic,strong)UILabel *productDescLabel;
 
 /** 产品标签 */
-@property(nonatomic,strong)UIButton *productTag;
+@property(nonatomic,strong)QCProductTagButton *productTag;
 
 /** 产品工具条  */
 @property(nonatomic,strong)QCProductToolBar *productToolBar;
@@ -95,7 +96,7 @@
 /** 关注 */
 - (UIButton *)followBtn{
     if (!_followBtn) {
-        _followBtn = [[UIButton alloc] init];
+        _followBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_followBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
         [_followBtn setTitleColor:[UIColor colorWithRed:1.000 green:0.000 blue:1.000 alpha:0.200] forState:UIControlStateNormal];
         [self.contentView addSubview:_followBtn];
@@ -136,14 +137,12 @@
 }
 
 /** 产品标签 */
-- (UIButton *)productTag{
+- (QCProductTagButton *)productTag{
     if (!_productTag) {
-        _productTag = [UIButton buttonWithType:UIButtonTypeCustom];
+        _productTag = [QCProductTagButton buttonWithType:UIButtonTypeCustom];
         [_productTag setTitleColor:[UIColor colorWithRed:1.000 green:0.000 blue:1.000 alpha:0.520] forState:UIControlStateNormal];
         [_productTag setImage:[UIImage imageNamed:@"icon-tag"] forState:UIControlStateNormal];
-        _productTag.imageEdgeInsets = UIEdgeInsetsMake(0, -58, 0, 0);
-        _productTag.titleEdgeInsets = UIEdgeInsetsMake(0, -38, 0, 0);
-
+        _productTag.titleLabel.font = QCProductTagButtonFon;
         [self.contentView addSubview:_productTag];
     }
     return _productTag;
@@ -235,8 +234,8 @@
     CGFloat productToolH = 40;
     self.productToolBar.frame = CGRectMake(productToolX, productToolY, productToolW, productToolH);
     
+    //设置圆角
     self.iconView.layer.cornerRadius = self.iconView.width * .5;
-
 
 }
 
@@ -262,11 +261,15 @@
     self.productTitleLabel.text = product.name;
     
     /** 产品描述 */
-    self.productDescLabel.text = product.briefDesc;
+    //将产品描述中的换行符换成空格, 以显示更多介绍
+    self.productDescLabel.text = [product.briefDesc stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
     
     /** 产品标签 */
     [self.productTag setTitle:categorie.name forState:UIControlStateNormal];
+    
 
 }
+
+
 
 @end
