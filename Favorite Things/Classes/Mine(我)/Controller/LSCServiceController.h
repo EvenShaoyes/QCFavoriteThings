@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LSCServiceController : UITableViewController
+@interface LSCServiceController : UIViewController
 
 @end

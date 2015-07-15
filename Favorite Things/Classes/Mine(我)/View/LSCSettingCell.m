@@ -55,7 +55,11 @@
 
 - (void)setupData
 {
-    self.imageView.image = [UIImage imageNamed:self.item.icon];
+    
+    if (self.item.icon.length)
+    {
+        self.imageView.image = [UIImage imageNamed:self.item.icon];
+    }
     self.textLabel.text = self.item.title;
     self.detailTextLabel.text = self.item.subTitle;
 }

@@ -43,6 +43,7 @@
     {
         _versionsLabel = [[UILabel alloc] init];
         [self.iconView addSubview:self.versionsLabel];
+        [_versionsLabel setTextColor:[UIColor redColor]];
     }
     return _versionsLabel;
 }
