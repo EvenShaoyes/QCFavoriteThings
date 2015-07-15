@@ -86,10 +86,16 @@
     [btn setImage:[UIImage imageNamed:selectImage] forState:UIControlStateSelected];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:btn];
     [self.buttons addObject:btn];
     return btn;
 }
+
+- (void)btnClick:(UIButton *)btn{
+    btn.selected = !btn.isSelected;
+}
+
 /**
  *  添加分割线
  */

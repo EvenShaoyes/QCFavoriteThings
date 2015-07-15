@@ -63,116 +63,103 @@
 
 @implementation QCProductCell
 
-#pragma make 懒加载
-/** 头像 */
-- (UIImageView *)iconView{
-    if (!_iconView) {
-        _iconView = [[UIImageView alloc] init];
-        [self.contentView addSubview:_iconView];
-        [_iconView.layer setMasksToBounds:YES];
-    }
-    return _iconView;
-}
-
-/** 昵称 */
-- (UILabel *)nicknameLabel{
-    if (!_nicknameLabel) {
-        _nicknameLabel = [[UILabel alloc] init];
-        [self.contentView addSubview:_nicknameLabel];
-        _nicknameLabel.font = QCProductNicknameFont;
-    }
-    return _nicknameLabel;
-}
-
-/** 地区 */
-- (UILabel *)provinceLabel{
-    if (!_provinceLabel) {
-        _provinceLabel = [[UILabel alloc] init];
-        _provinceLabel.font = QCProductProvinceFont;
-        [self.contentView addSubview:_provinceLabel];
-    }
-    return _provinceLabel;
-}
-
-/** 关注 */
-- (UIButton *)followBtn{
-    if (!_followBtn) {
-        _followBtn = [[UIButton alloc] init];
-        [_followBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
-        [_followBtn setTitleColor:[UIColor colorWithRed:1.000 green:0.000 blue:1.000 alpha:0.200] forState:UIControlStateNormal];
-        [self.contentView addSubview:_followBtn];
-    }
-    return _followBtn;
-}
-
-/** 产品图片 */
-- (UIImageView *)productImageView{
-    if (!_productImageView) {
-        _productImageView = [[UIImageView alloc] init];
-        [self.contentView addSubview:_productImageView];
-    }
-    return _productImageView;
-}
-
-/** 产品标题 */
-- (UILabel *)productTitleLabel{
-    if (!_productTitleLabel) {
-        _productTitleLabel = [[UILabel alloc] init];
-        _productTitleLabel.font = QCProductTitleFont;
-//        _productTitleLabel
-        [self.contentView addSubview:_productTitleLabel];
-    }
-    return _productTitleLabel;
-}
-
-/** 产品描述 */
-- (UILabel *)productDescLabel{
-    if (!_productDescLabel) {
-        _productDescLabel = [[UILabel alloc] init];
-        _productDescLabel.font = QCProductDescFont;
-        _productDescLabel.numberOfLines = 0;
-        _productDescLabel.textColor = [UIColor grayColor];
-        [self.contentView addSubview:_productDescLabel];
-    }
-    return _productDescLabel;
-}
-
-/** 产品标签 */
-- (QCProductTagButton *)productTag{
-    if (!_productTag) {
-        _productTag = [QCProductTagButton buttonWithType:UIButtonTypeCustom];
-        [_productTag setTitleColor:[UIColor colorWithRed:1.000 green:0.000 blue:1.000 alpha:0.520] forState:UIControlStateNormal];
-        [_productTag setImage:[UIImage imageNamed:@"icon-tag"] forState:UIControlStateNormal];
-        _productTag.titleLabel.font = QCProductTagButtonFont;
-
-        [self.contentView addSubview:_productTag];
-    }
-    return _productTag;
-}
-
-/** 产品工具条  */
-- (QCProductToolBar *)productToolBar{
-    if (!_productToolBar) {
-        _productToolBar = [[QCProductToolBar alloc] init];
-        [self.contentView addSubview:_productToolBar];
-    }
-    return _productToolBar;
-}
-
 + (instancetype)cellWithTableView:(UITableView *)tableView{
     static NSString *const ID = @"product";
     QCProductCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[QCProductCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor grayColor];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
     }
     return cell;
 }
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
+        /** 头像 */
+        self.iconView = [[UIImageView alloc] init];
+        [self.contentView addSubview:self.iconView];
+        [self.iconView.layer setMasksToBounds:YES];
+        
+        /** 昵称 */
+        self.nicknameLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:self.nicknameLabel];
+        self.nicknameLabel.font = QCProductNicknameFont;
+        
+        /** 地区 */
+        self.provinceLabel = [[UILabel alloc] init];
+        self.provinceLabel.font = QCProductProvinceFont;
+        [self.contentView addSubview:self.provinceLabel];
+        
+        /** 关注 */
+        self.followBtn = [[UIButton alloc] init];
+        [self.followBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
+        [self.followBtn setTitleColor:[UIColor colorWithRed:1.000 green:0.000 blue:1.000 alpha:0.200] forState:UIControlStateNormal];
+        [self.contentView addSubview:self.followBtn];
+        
+        /** 产品图片 */
+        self.productImageView = [[UIImageView alloc] init];
+        [self.contentView addSubview:self.productImageView];
+        
+        /** 产品标题 */
+        self.productTitleLabel = [[UILabel alloc] init];
+        self.productTitleLabel.font = QCProductTitleFont;
+        [self.contentView addSubview:self.productTitleLabel];
+        
+        /** 产品描述 */
+        self.productDescLabel = [[UILabel alloc] init];
+        self.productDescLabel.font = QCProductDescFont;
+        self.productDescLabel.numberOfLines = 0;
+        self.productDescLabel.textColor = [UIColor grayColor];
+        [self.contentView addSubview:self.productDescLabel];
+        
+        /** 产品标签 */
+        self.productTag = [QCProductTagButton buttonWithType:UIButtonTypeCustom];
+        [self.productTag setTitleColor:[UIColor colorWithRed:1.000 green:0.000 blue:1.000 alpha:0.520] forState:UIControlStateNormal];
+        [self.productTag setImage:[UIImage imageNamed:@"icon-tag"] forState:UIControlStateNormal];
+        self.productTag.titleLabel.font = QCProductTagButtonFont;
+        [self.contentView addSubview:self.productTag];
+        
+        /** 产品工具条  */
+        self.productToolBar = [[QCProductToolBar alloc] init];
+        [self.contentView addSubview:self.productToolBar];
+    }
+    return self;
+}
 
--  (void)layoutSubviews{
-    [super layoutSubviews];
+
+- (void)setProduct:(QCProduct *)product{
+    _product = product;
     
+    QCUploadUser *user = product.uploadUser;
+    QCCategories *categorie = [product.categories firstObject];
+    
+    /** 头像 */
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.avatarUrl] placeholderImage:nil];
+    
+    /** 昵称 */
+    self.nicknameLabel.text = user.username;
+    
+    /** 地区 */
+    self.provinceLabel.text = user.province;
+    
+    /** 产品图片 */
+    [self.productImageView sd_setImageWithURL:[NSURL URLWithString:product.imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    
+    /** 产品标题 */
+    self.productTitleLabel.text = product.name;
+    
+    /** 产品描述 */
+    self.productDescLabel.text = [product.briefDesc stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
+    
+    /** 产品标签 */
+    [self.productTag setTitle:categorie.name forState:UIControlStateNormal];
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
     
     /** 头像 */
     CGFloat iconX = QCProductMargin;
@@ -236,40 +223,9 @@
     CGFloat productToolH = 40;
     self.productToolBar.frame = CGRectMake(productToolX, productToolY, productToolW, productToolH);
     
-    
-    
     self.iconView.layer.cornerRadius = self.iconView.width * .5;
 
-
 }
 
-- (void)setProduct:(QCProduct *)product{
-    _product = product;
-    
-    QCUploadUser *user = product.uploadUser;
-    QCCategories *categorie = [product.categories firstObject];
-
-    /** 头像 */
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.avatarUrl] placeholderImage:nil];
-    
-    /** 昵称 */
-    self.nicknameLabel.text = user.username;
-    
-    /** 地区 */
-    self.provinceLabel.text = user.province;
-    
-    /** 产品图片 */
-    [self.productImageView sd_setImageWithURL:[NSURL URLWithString:product.imageUrl] placeholderImage:[UIImage imageNamed:@"placeholder"]];
-    
-    /** 产品标题 */
-    self.productTitleLabel.text = product.name;
-    
-    /** 产品描述 */
-    self.productDescLabel.text = product.briefDesc;
-    
-    /** 产品标签 */
-    [self.productTag setTitle:categorie.name forState:UIControlStateNormal];
-
-}
 
 @end
