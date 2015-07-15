@@ -31,21 +31,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    [manager GET:@"http://182.92.26.196:8080/wanyi/api/product/" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        self.productList = [QCProduct objectArrayWithKeyValuesArray:responseObject];
-//    
-//        self.productList = [[self.productList reverseObjectEnumerator] allObjects];
-//        
-//        [self.tableView reloadData];
-//        
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        
-//    }];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://182.92.26.196:8080/wanyi/api/product/" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        self.productList = [QCProduct objectArrayWithKeyValuesArray:responseObject];
+    
+        self.productList = [[self.productList reverseObjectEnumerator] allObjects];
+        
+        [self.tableView reloadData];
+   
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"请求失败 -- %@",error);
+    }];
 
     self.tableView.rowHeight = 500;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = [UIColor grayColor];
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.949 green:0.949 blue:0.949 alpha:1];
     
     
 }

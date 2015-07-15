@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class QCCategory;
+@class QCCategories;
 @interface QCCategoryCell : UITableViewCell
 
-@property(nonatomic,strong)QCCategory *category;
+@property(nonatomic,strong)QCCategories *category;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
+
 @end

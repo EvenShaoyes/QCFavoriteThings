@@ -7,7 +7,7 @@
 //
 
 #import "QCCategoryCell.h"
-#import "QCCategory.h"
+#import "QCCategories.h"
 #import "UIImageView+WebCache.h"
 
 @interface QCCategoryCell()
@@ -40,16 +40,17 @@
     QCCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [QCCategoryCell cell];;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }
 
-- (void)setCategory:(QCCategory *)category{
+- (void)setCategory:(QCCategories *)category{
     _category = category;
-    
     self.categoryName.text = category.name;
     self.categoryDesc.text = category.desc;
 //    [self.categoryImage sd_setImageWithURL:category.ur]
 }
+
 
 @end

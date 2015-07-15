@@ -23,7 +23,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupData];
-    NSLog(@"%@",self.view.subviews);
 }
     /** 图片 */
 - (UIImageView *)iconView

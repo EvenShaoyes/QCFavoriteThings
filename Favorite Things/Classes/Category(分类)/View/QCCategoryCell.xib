@@ -39,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mca-kA-mnt">
-                        <rect key="frame" x="0.0" y="91" width="312" height="1"/>
+                        <rect key="frame" x="0.0" y="98.5" width="312" height="1"/>
                         <color key="backgroundColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="8HR-vD-YjY"/>
@@ -49,7 +49,7 @@
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="Mca-kA-mnt" secondAttribute="trailing" constant="-8" id="8La-z4-qVn"/>
                     <constraint firstAttribute="centerY" secondItem="2VE-85-yzp" secondAttribute="centerY" constant="-18.25" id="H3T-a7-9sD"/>
-                    <constraint firstItem="Mca-kA-mnt" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Mci-3v-geW"/>
+                    <constraint firstItem="Mca-kA-mnt" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="8" id="Mci-3v-geW"/>
                     <constraint firstAttribute="trailingMargin" secondItem="XAW-7d-7sz" secondAttribute="trailing" constant="12" id="XyT-jJ-L5h"/>
                     <constraint firstItem="U5k-yU-uUa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="ahC-Q9-rCK"/>
                     <constraint firstAttribute="centerY" secondItem="XAW-7d-7sz" secondAttribute="centerY" id="bay-xJ-WHY"/>
