@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42B9CCDE1B56A0180033CA66 /* LSCHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B9CCDD1B56A0180033CA66 /* LSCHeadView.m */; };
+		42C761E01B56CF51004D2C96 /* LSCMineToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C761DF1B56CF51004D2C96 /* LSCMineToolBar.m */; };
 		42CCBD2A1B54CCAD00F2367C /* LSCAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCBD261B54CCAD00F2367C /* LSCAboutController.m */; };
 		42CCBD2B1B54CCAD00F2367C /* LSCServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCBD271B54CCAD00F2367C /* LSCServiceController.m */; };
 		42CCBD2C1B54CCAD00F2367C /* LSCSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CCBD281B54CCAD00F2367C /* LSCSettingController.m */; };
@@ -95,6 +97,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42B9CCDC1B56A0180033CA66 /* LSCHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSCHeadView.h; path = ../View/LSCHeadView.h; sourceTree = "<group>"; };
+		42B9CCDD1B56A0180033CA66 /* LSCHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSCHeadView.m; path = ../View/LSCHeadView.m; sourceTree = "<group>"; };
+		42C761DE1B56CF51004D2C96 /* LSCMineToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCMineToolBar.h; sourceTree = "<group>"; };
+		42C761DF1B56CF51004D2C96 /* LSCMineToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCMineToolBar.m; sourceTree = "<group>"; };
 		42CCBD261B54CCAD00F2367C /* LSCAboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCAboutController.m; sourceTree = "<group>"; };
 		42CCBD271B54CCAD00F2367C /* LSCServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCServiceController.m; sourceTree = "<group>"; };
 		42CCBD281B54CCAD00F2367C /* LSCSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCSettingController.m; sourceTree = "<group>"; };
@@ -277,6 +283,8 @@
 				42CCBD381B54CEF200F2367C /* LSCSettingGroup.m */,
 				42CCBD391B54CEF200F2367C /* LSCSettingItem.h */,
 				42CCBD3A1B54CEF200F2367C /* LSCSettingItem.m */,
+				42C761DE1B56CF51004D2C96 /* LSCMineToolBar.h */,
+				42C761DF1B56CF51004D2C96 /* LSCMineToolBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -500,6 +508,8 @@
 		77438D351B52CEC000192AFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				42B9CCDC1B56A0180033CA66 /* LSCHeadView.h */,
+				42B9CCDD1B56A0180033CA66 /* LSCHeadView.m */,
 				42CCBD3F1B54CFB100F2367C /* LSCBaseTableViewController.h */,
 				42CCBD401B54CFB100F2367C /* LSCBaseTableViewController.m */,
 				42CCBD2E1B54CD9700F2367C /* LSCAboutController.h */,
@@ -771,7 +781,7 @@
 		77438CF21B52CBFD00192AFF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = QC;
+				CLASSPREFIX = LSC;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Joe-c";
 				TargetAttributes = {
@@ -835,6 +845,7 @@
 				7795CC3B1B534123001CB10E /* QCUploadViewController.m in Sources */,
 				7767BCE41B53B9CD0004AAE7 /* AFHTTPRequestOperationManager.m in Sources */,
 				7795CC381B534104001CB10E /* QCCategoryViewController.m in Sources */,
+				42B9CCDE1B56A0180033CA66 /* LSCHeadView.m in Sources */,
 				7767BCE81B53B9CD0004AAE7 /* AFURLConnectionOperation.m in Sources */,
 				77C2C67C1B5369CC001BC2F3 /* QCProductCell.m in Sources */,
 				779E18981B53583D00593A05 /* QCTabBar.m in Sources */,
@@ -867,6 +878,7 @@
 				7767BD0A1B53BF0F0004AAE7 /* MJFoundation.m in Sources */,
 				7767BD3B1B53C40B0004AAE7 /* SDWebImageDownloader.m in Sources */,
 				773F4E831B56426200405107 /* QCThingsShowViewController.m in Sources */,
+				42C761E01B56CF51004D2C96 /* LSCMineToolBar.m in Sources */,
 				7767BD371B53C40B0004AAE7 /* NSData+ImageContentType.m in Sources */,
 				42CCBD2D1B54CCAD00F2367C /* LSCVersionsController.m in Sources */,
 				7767BCE71B53B9CD0004AAE7 /* AFSecurityPolicy.m in Sources */,

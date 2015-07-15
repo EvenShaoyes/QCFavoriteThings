@@ -8,14 +8,26 @@
 
 #import "QCMineViewController.h"
 #import "LSCSettingController.h"
+#import "LSCHeadView.h"
+#import "LSCMineToolBar.h"
 @interface QCMineViewController ()
 
 @end
 
 @implementation QCMineViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
+    LSCHeadView *headView = [[LSCHeadView alloc] init];
+    CGRect rect = headView.view.frame;
+    rect.size.height = 300;
+    headView.view.frame = rect;
+    headView.view.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:headView.view];
+    
+ 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(clickSettingItem)];
 }
 

@@ -9,6 +9,9 @@
 #import "LSCVersionsController.h"
 #import "UIView+Extend.h"
 #import "NSString+extend.h"
+#define LSCVERSIONFONT [UIFont systemFontOfSize:14]
+#define LSCSCREENW [UIScreen mainScreen].bounds.size.width
+#define LSCSCREENH [UIScreen mainScreen].bounds.size.height
 @interface LSCVersionsController ()
 /**图片*/
 @property (nonatomic, strong) UIImageView *iconView;
@@ -30,6 +33,7 @@
     if (!_iconView)
     {
         _iconView = [[UIImageView alloc] init];
+        self.iconView.image = [UIImage imageNamed:@"about"];
         [self.view addSubview:self.iconView];
     }
     return _iconView;
@@ -39,11 +43,12 @@
     /** 版本号 */
 - (UILabel *)versionsLabel
 {
-    if (_versionsLabel)
+    if (!_versionsLabel)
     {
         _versionsLabel = [[UILabel alloc] init];
-        [self.iconView addSubview:self.versionsLabel];
-        [_versionsLabel setTextColor:[UIColor redColor]];
+        self.versionsLabel.font = LSCVERSIONFONT;
+        self.versionsLabel.text = @"版本0.4.4";
+        [self.view addSubview:self.versionsLabel];
     }
     return _versionsLabel;
 }
@@ -53,17 +58,17 @@
     /** 图片 */
     CGFloat iconX = 0;
     CGFloat iconY = 0;
-    CGFloat iconW = [UIScreen mainScreen].bounds.size.width;
-    CGFloat iconH = [UIScreen mainScreen].bounds.size.height;
+    CGFloat iconW = LSCSCREENW;
+    CGFloat iconH = LSCSCREENH;
     self.iconView.frame = CGRectMake(iconX, iconY, iconW, iconH);
-    self.iconView.image = [UIImage imageNamed:@"about"];
+    
 
     /** 版本号 */
-    CGFloat versionsX = iconW *.5;
-    CGFloat versionsY = 300;
-    CGSize versionsSize = [self.versionsLabel.text sizeWithFont:[UIFont systemFontOfSize:14]];
+    CGFloat versionsX = LSCSCREENW *.43;
+    CGFloat versionsY = LSCSCREENH - 140;
+    CGSize versionsSize = [self.versionsLabel.text sizeWithFont:LSCVERSIONFONT];
     self.versionsLabel.frame = (CGRect){{versionsX, versionsY},versionsSize};
-    self.versionsLabel.text = @"版本0.4.4";
+    
     
 }
 
