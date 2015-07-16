@@ -19,7 +19,7 @@
                             <constraint firstAttribute="height" constant="150" id="3Gc-3s-JZa"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哈哈啊哈哈哈哈哈哈哈哈啊啊哈啊" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2H-xa-R85">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2H-xa-R85">
                         <rect key="frame" x="8" y="154" width="137" height="39"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="39" id="k0E-Jh-iWW"/>

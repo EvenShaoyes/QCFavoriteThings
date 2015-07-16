@@ -24,7 +24,6 @@ static NSString *const ID =@"category";
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"QCThingsCell" bundle:nil] forCellWithReuseIdentifier:ID];
     self.collectionView.backgroundColor = [UIColor colorWithRed:0.949 green:0.949 blue:0.949 alpha:1];
-    
 
 }
 

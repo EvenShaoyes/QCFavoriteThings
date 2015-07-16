@@ -2,7 +2,7 @@
 //  QCCategoryCell.h
 //  Favorite Things
 //
-//  Created by Joe-c on 15/7/15.
+//  Created by Joe-c on 15/7/16.
 //  Copyright (c) 2015年 Joe-c. All rights reserved.
 //
 

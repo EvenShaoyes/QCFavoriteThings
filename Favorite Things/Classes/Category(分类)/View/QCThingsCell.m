@@ -18,6 +18,7 @@
 
 @implementation QCThingsCell
 
+
 - (void)setProduct:(QCProduct *)product{
     _product = product;
     
@@ -25,4 +26,6 @@
     self.productDesc.text = product.name;
     
 }
+
+
 @end
