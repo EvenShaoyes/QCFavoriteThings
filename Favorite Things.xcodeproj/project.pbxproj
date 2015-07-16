@@ -79,6 +79,8 @@
 		77A322BB1B5697A7002B10A8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A322BA1B5697A7002B10A8 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		77A6248A1B5759D6002F593F /* QCCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A624881B5759D6002F593F /* QCCategoryCell.m */; };
 		77A6248B1B5759D6002F593F /* QCCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A624891B5759D6002F593F /* QCCategoryCell.xib */; };
+		77A6248E1B5764C3002F593F /* QCNotificaton.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6248D1B5764C3002F593F /* QCNotificaton.m */; };
+		77A624911B576E49002F593F /* QCNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A624901B576E49002F593F /* QCNotificationCell.m */; };
 		77C2C67C1B5369CC001BC2F3 /* QCProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C2C67B1B5369CC001BC2F3 /* QCProductCell.m */; };
 		77C2C67F1B536E23001BC2F3 /* QCProductToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C2C67E1B536E23001BC2F3 /* QCProductToolBar.m */; };
 		77C2C6821B537F36001BC2F3 /* NSString+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C2C6811B537F36001BC2F3 /* NSString+extend.m */; };
@@ -243,6 +245,10 @@
 		77A624871B5759D6002F593F /* QCCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCCategoryCell.h; sourceTree = "<group>"; };
 		77A624881B5759D6002F593F /* QCCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCCategoryCell.m; sourceTree = "<group>"; };
 		77A624891B5759D6002F593F /* QCCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QCCategoryCell.xib; sourceTree = "<group>"; };
+		77A6248C1B5764C3002F593F /* QCNotificaton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNotificaton.h; sourceTree = "<group>"; };
+		77A6248D1B5764C3002F593F /* QCNotificaton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNotificaton.m; sourceTree = "<group>"; };
+		77A6248F1B576E49002F593F /* QCNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNotificationCell.h; sourceTree = "<group>"; };
+		77A624901B576E49002F593F /* QCNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNotificationCell.m; sourceTree = "<group>"; };
 		77C2C67A1B5369CC001BC2F3 /* QCProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCProductCell.h; sourceTree = "<group>"; };
 		77C2C67B1B5369CC001BC2F3 /* QCProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCProductCell.m; sourceTree = "<group>"; };
 		77C2C67D1B536E23001BC2F3 /* QCProductToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCProductToolBar.h; sourceTree = "<group>"; };
@@ -558,6 +564,8 @@
 		77438D3A1B52CEC000192AFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77A6248C1B5764C3002F593F /* QCNotificaton.h */,
+				77A6248D1B5764C3002F593F /* QCNotificaton.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -565,6 +573,8 @@
 		77438D3B1B52CEC000192AFF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				77A6248F1B576E49002F593F /* QCNotificationCell.h */,
+				77A624901B576E49002F593F /* QCNotificationCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -867,6 +877,7 @@
 				7767BD0B1B53BF0F0004AAE7 /* MJProperty.m in Sources */,
 				7767BCE51B53B9CD0004AAE7 /* AFHTTPSessionManager.m in Sources */,
 				7767BD451B53C40B0004AAE7 /* UIView+WebCacheOperation.m in Sources */,
+				77A624911B576E49002F593F /* QCNotificationCell.m in Sources */,
 				7767BCF61B53BD3D0004AAE7 /* QCUploadUser.m in Sources */,
 				7767BD3A1B53C40B0004AAE7 /* SDWebImageDecoder.m in Sources */,
 				7767BD0F1B53BF0F0004AAE7 /* NSObject+MJProperty.m in Sources */,
@@ -893,6 +904,7 @@
 				773F4E831B56426200405107 /* QCThingsShowViewController.m in Sources */,
 				42C761E01B56CF51004D2C96 /* LSCMineToolBar.m in Sources */,
 				7767BD371B53C40B0004AAE7 /* NSData+ImageContentType.m in Sources */,
+				77A6248E1B5764C3002F593F /* QCNotificaton.m in Sources */,
 				42CCBD2D1B54CCAD00F2367C /* LSCVersionsController.m in Sources */,
 				7767BCE71B53B9CD0004AAE7 /* AFSecurityPolicy.m in Sources */,
 				77A322BB1B5697A7002B10A8 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

@@ -43,7 +43,7 @@
     }];
 
     self.tableView.rowHeight = 100;
-//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
 
     
